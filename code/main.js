@@ -128,6 +128,21 @@ window.onload = function init()
 		console.error(error);
 	});
 
+	// 게르니카 스포트라이트
+	spotLight = new THREE.SpotLight( 0xffffff, 0.8); // 파라미터 : (조명 색, 조명 세기)
+	spotLight.position.set( 50, 70, 433 ); // 광원의 위치
+	spotLight.angle = Math.PI/4; // 비추는 범위 크기(원형태)
+	spotLight.castShadow = true; // 그림자 생성
+	// spotLight.shadow.mapSize.width = 1;
+	// spotLight.shadow.mapSize.height = 1;
+
+	// spotLight.shadow.camera.near = 1;
+	// spotLight.shadow.camera.far = 1;
+	// spotLight.shadow.camera.fov = 1;
+	spotLight.target.position.set(110, 25, 433); // 비출 대상의 위치 (= 빛의 방향)
+	spotLight.target.updateMatrixWorld(); // 정보 업데이트
+	scene.add( spotLight ); // 빛 정보 추가
+
 	// 2D -> 3D 작품 - 게르니카
     loader.load('./painting/guernica/scene.gltf', function(gltf){
         paint_b = gltf.scene.children[0];
@@ -144,6 +159,9 @@ window.onload = function init()
 	}, undefined, function (error) {
 		console.error(error);
 	});
+
+	
+
 
 	// 동상 1 -밀로의 비너스 
 	   loader.load('./statue/venus_milo/scene.gltf', function(gltf){
