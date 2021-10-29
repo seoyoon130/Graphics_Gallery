@@ -51,7 +51,8 @@ window.onload = function init()
 	const loader = new THREE.GLTFLoader();
 	loader.load('./jannotta_gallery/scene.gltf', function(gltf){
         exhibition = gltf.scene.children[0];
-        exhibition.scale.set(1.5,1.5,1.5);
+		exhibition.position.set(0, 0, 400);
+        exhibition.scale.set(10,10,10);
 	  model = gltf.scene;
 	  
 	  scene.add(model);
@@ -62,12 +63,10 @@ window.onload = function init()
 	});
 
     // 작품 1 - 별이 빛나는 밤
-    loader.load('./painting/scene.gltf', function(gltf){
+    loader.load('./painting/starry_night/scene.gltf', function(gltf){
         paint_1 = gltf.scene.children[0];
-        paint_1.position.set(0, 0, 0);
-        paint_1.rotation.z = getRadian(270);
-        paint_1.position.set(9, 7, -39);
-        paint_1.scale.set(8,7,7);
+        paint_1.position.set(8, 45, 13);
+        paint_1.scale.set(80,50,60);
         
 	  model = gltf.scene;
 	  
@@ -78,11 +77,13 @@ window.onload = function init()
 		console.error(error);
 	});
 
-    // 작품 2 - 별이 빛나는 밤 (위치 변경)
-    loader.load('./painting/scene.gltf', function(gltf){
+	// 작품 2 - 올리브 트리
+    loader.load('./painting/olivetree/scene.gltf', function(gltf){
         paint_2 = gltf.scene.children[0];
-        paint_2.position.set(1, 7, -58);
-        paint_2.scale.set(12,11,7);
+		paint_2.position.set(0, 0, 0);
+        paint_2.rotation.z = getRadian(-90);
+        paint_2.position.set(19, 45, 160);
+        paint_2.scale.set(4,4,4);
         
 	  model = gltf.scene;
 	  
@@ -93,6 +94,104 @@ window.onload = function init()
 		console.error(error);
 	});
 
+	// 작품 3 - 모나리자
+    loader.load('./painting/monalisa/scene.gltf', function(gltf){
+        paint_3 = gltf.scene.children[0];
+		paint_3.position.set(0, 0, 0);
+        paint_3.rotation.z = getRadian(-90);
+        paint_3.position.set(58, 52, 230);
+        paint_3.scale.set(4,4,4);
+        
+	  model = gltf.scene;
+	  
+	  scene.add(model);
+
+	  animate();
+	}, undefined, function (error) {
+		console.error(error);
+	});
+
+	// 작품 4 - 라파이
+    loader.load('./painting/lapie/scene.gltf', function(gltf){
+        paint_4 = gltf.scene.children[0];
+		paint_4.position.set(0, 0, 0);
+        paint_4.rotation.z = getRadian(-90);
+        paint_4.position.set(59, 52, 320);
+        paint_4.scale.set(48,8,48);
+        
+	  model = gltf.scene;
+	  
+	  scene.add(model);
+
+	  animate();
+	}, undefined, function (error) {
+		console.error(error);
+	});
+
+	// 2D -> 3D 작품 - 게르니카
+    loader.load('./painting/guernica/scene.gltf', function(gltf){
+        paint_b = gltf.scene.children[0];
+		paint_b.position.set(0, 0, 0);
+        paint_b.rotation.z = getRadian(90);
+        paint_b.position.set(110, -1, 433);
+        paint_b.scale.set(10,10,21);
+        
+	  model = gltf.scene;
+	  
+	  scene.add(model);
+
+	  animate();
+	}, undefined, function (error) {
+		console.error(error);
+	});
+
+	// 동상 1 -밀로의 비너스 
+	   loader.load('./statue/venus_milo/scene.gltf', function(gltf){
+        statue_1 = gltf.scene.children[0];
+		statue_1.rotation.z = getRadian(80);
+        statue_1.position.set(-40,0,170);
+        statue_1.scale.set(0.035,0.035,0.035);
+        
+	  model = gltf.scene;
+	  
+	  scene.add(model);
+
+	  animate();
+	}, undefined, function (error) {
+		console.error(error);
+	});
+
+	// 동상 2 - 미론 - 원반 던지는 사람
+	loader.load('./statue/discobolus/scene.gltf', function(gltf){
+        statue_2 = gltf.scene.children[0];
+		statue_2.rotation.z = getRadian(80);
+        statue_2.position.set(-75,37,260);
+        statue_2.scale.set(5,5,5);
+        
+	  model = gltf.scene;
+	  
+	  scene.add(model);
+
+	  animate();
+	}, undefined, function (error) {
+		console.error(error);
+	});
+
+	// 동상 3 - 미켈란젤로 - 다비드
+	loader.load('./statue/david/scene.gltf', function(gltf){
+        statue_3 = gltf.scene.children[0];
+		statue_3.rotation.z = getRadian(80);
+        statue_3.position.set(-35,0,410);
+        statue_3.scale.set(0.3,0.3,0.3);
+        
+	  model = gltf.scene;
+	  
+	  scene.add(model);
+
+	  animate();
+	}, undefined, function (error) {
+		console.error(error);
+	});
 
 	function animate() {
 

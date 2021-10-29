@@ -1,0 +1,11 @@
+Model Information:
+* title:	Guernica (Picasso)
+* source:	https://sketchfab.com/3d-models/guernica-picasso-eb18506d6e864ee19feeedc1a9b04d55
+* author:	AIDI (https://sketchfab.com/aidi)
+
+Model License:
+* license type:	CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
+* requirements:	Author must be credited. Modified versions must have the same license. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Guernica (Picasso)" (https://sketchfab.com/3d-models/guernica-picasso-eb18506d6e864ee19feeedc1a9b04d55) by AIDI (https://sketchfab.com/aidi) licensed under CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
