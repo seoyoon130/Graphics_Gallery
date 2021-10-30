@@ -44,6 +44,7 @@ window.onload = function init()
 	light4.position.set(1000000,-1000000,-1000000);
 	scene.add(light4);
 
+
     // 모델 로드 
 	var model;
 
@@ -169,9 +170,59 @@ window.onload = function init()
 		console.error(error);
 	});
 
+	// 작품 5 - 모네 (수련)
+    loader.load('./painting/water_lilies/scene.gltf', function(gltf){
+        paint_5 = gltf.scene.children[0];
+		paint_5.position.set(0, 0, 0);
+        paint_5.rotation.z = getRadian(-90);
+        paint_5.position.set(59, 52, 550 );
+        paint_5.scale.set(4, 4, 4);
+        
+	  model = gltf.scene;
+	  
+	  scene.add(model);
+
+	  animate();
+	}, undefined, function (error) {
+		console.error(error);
+	});
 	
+	// 작품 6 - 모네 (양산을 든 여인)
+    loader.load('./painting/woman/scene.gltf', function(gltf){
+        paint_6 = gltf.scene.children[0];
+		paint_6.position.set(0, 0, 0);
+        paint_6.rotation.z = getRadian(-90);
+        paint_6.position.set(59, 38, 650 );
+        paint_6.scale.set(30, 70, 30);
+        
+	  model = gltf.scene;
+	  
+	  scene.add(model);
 
+	  animate();
+	}, undefined, function (error) {
+		console.error(error);
+	});
 
+	// 작품 7 - 드가 (발레수업)
+    loader.load('./painting/edgar_degas/scene.gltf', function(gltf){
+        paint_7 = gltf.scene.children[0];
+		paint_7.position.set(0, 0, 0);
+        paint_7.rotation.z = getRadian(-90);
+        paint_7.position.set(59, 52, 730);
+        paint_7.scale.set(30, 60, 30);
+        
+	  model = gltf.scene;
+	  
+	  scene.add(model);
+
+	  animate();
+	}, undefined, function (error) {
+		console.error(error);
+	});
+
+	
+	
 	// 동상 1 -밀로의 비너스 
 	   loader.load('./statue/venus_milo/scene.gltf', function(gltf){
         statue_1 = gltf.scene.children[0];
@@ -219,6 +270,55 @@ window.onload = function init()
 	}, undefined, function (error) {
 		console.error(error);
 	});
+
+	// 동상 4 - 로댕(생각하는 사람)
+	loader.load('./statue/the_thinker/scene.gltf', function(gltf){
+        statue_4 = gltf.scene.children[0];
+		statue_4.rotation.z = getRadian(80);
+        statue_4.position.set(-35,0,500);
+        statue_4.scale.set(25, 30, 30);
+        
+	  model = gltf.scene;
+	  
+	  scene.add(model);
+
+	  animate();
+	}, undefined, function (error) {
+		console.error(error);
+	}); 
+
+
+	// // 동상 5 - 피에타
+	// loader.load('./statue/pieta/scene.gltf', function(gltf){
+    //     statue_5 = gltf.scene.children[0];
+	// 	statue_5.rotation.z = getRadian(80);
+    //     statue_5.position.set(-35,-15,650);
+    //     statue_5.scale.set(20, 25, 20);
+        
+	//   model = gltf.scene;
+	  
+	//   scene.add(model);
+
+	//   animate();
+	// }, undefined, function (error) {
+	// 	console.error(error);
+	// }); 
+
+	// // 동상 6 - Grabfigur
+	// loader.load('./statue/Grabfigur/scene.gltf', function(gltf){
+    //     statue_6 = gltf.scene.children[0];
+	// 	statue_6.rotation.z = getRadian(80);
+    //     statue_6.position.set(-30,0,740);
+    //     statue_6.scale.set(2, 4, 4);
+        
+	//   model = gltf.scene;
+	  
+	//   scene.add(model);
+
+	//   animate();
+	// }, undefined, function (error) {
+	// 	console.error(error);
+	// }); 
 
 	function animate() {
 

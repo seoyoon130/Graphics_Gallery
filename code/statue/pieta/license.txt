@@ -1,0 +1,11 @@
+Model Information:
+* title:	Pietá
+* source:	https://sketchfab.com/3d-models/pieta-7a356557f84d47b2bba45daad9e1c23a
+* author:	noe-3d.at (https://sketchfab.com/www.noe-3d.at)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Pietá" (https://sketchfab.com/3d-models/pieta-7a356557f84d47b2bba45daad9e1c23a) by noe-3d.at (https://sketchfab.com/www.noe-3d.at) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
