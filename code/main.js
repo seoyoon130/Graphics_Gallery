@@ -79,9 +79,9 @@ window.onload = function init()
 	});
 
 	// 올리브 트리 스포트라이트
-	spotLight_2 = new THREE.SpotLight( 0xfcf7cf, 0.5); // 파라미터 : (조명 색, 조명 세기)
+	spotLight_2 = new THREE.SpotLight( 0xfcf7cf, 0.3); // 파라미터 : (조명 색, 조명 세기)
 	spotLight_2.position.set(1, 70, 153 ); // 광원의 위치
-	spotLight_2.angle = Math.PI/11; // 비추는 범위 크기(원형태)
+	spotLight_2.angle = Math.PI/9; // 비추는 범위 크기(원형태)
 	spotLight_2.castShadow = true; // 그림자 생성
 	spotLight_2.target.position.set(19, 65, 153); // 비출 대상의 위치 (= 빛의 방향)
 	spotLight_2.target.updateMatrixWorld(); // 정보 업데이트
@@ -104,6 +104,15 @@ window.onload = function init()
 		console.error(error);
 	});
 
+	// 모나리자 스포트라이트
+	spotLight_3 = new THREE.SpotLight( 0xfcf7cf, 0.3); // 파라미터 : (조명 색, 조명 세기)
+	spotLight_3.position.set(1, 70, 230 ); // 광원의 위치
+	spotLight_3.angle = Math.PI/10; // 비추는 범위 크기(원형태)
+	spotLight_3.castShadow = true; // 그림자 생성
+	spotLight_3.target.position.set(58, 55, 230); // 비출 대상의 위치 (= 빛의 방향)
+	spotLight_3.target.updateMatrixWorld(); // 정보 업데이트
+	scene.add( spotLight_3 ); // 빛 정보 추가
+
 	// 작품 3 - 모나리자
     loader.load('./painting/monalisa/scene.gltf', function(gltf){
         paint_3 = gltf.scene.children[0];
@@ -120,6 +129,15 @@ window.onload = function init()
 	}, undefined, function (error) {
 		console.error(error);
 	});
+
+	// 라파이 스포트라이트
+	spotLight_4 = new THREE.SpotLight( 0xfcf7cf, 0.3); // 파라미터 : (조명 색, 조명 세기)
+	spotLight_4.position.set(1, 70, 320 ); // 광원의 위치
+	spotLight_4.angle = Math.PI/7; // 비추는 범위 크기(원형태)
+	spotLight_4.castShadow = true; // 그림자 생성
+	spotLight_4.target.position.set(58, 55, 320); // 비출 대상의 위치 (= 빛의 방향)
+	spotLight_4.target.updateMatrixWorld(); // 정보 업데이트
+	scene.add( spotLight_4 ); // 빛 정보 추가
 
 	// 작품 4 - 라파이
     loader.load('./painting/lapie/scene.gltf', function(gltf){
@@ -192,7 +210,7 @@ window.onload = function init()
         paint_6 = gltf.scene.children[0];
 		paint_6.position.set(0, 0, 0);
         paint_6.rotation.z = getRadian(-90);
-        paint_6.position.set(59, 38, 650 );
+        paint_6.position.set(60, 38, 650 );
         paint_6.scale.set(30, 70, 30);
         
 	  model = gltf.scene;
@@ -209,7 +227,7 @@ window.onload = function init()
         paint_7 = gltf.scene.children[0];
 		paint_7.position.set(0, 0, 0);
         paint_7.rotation.z = getRadian(-90);
-        paint_7.position.set(59, 52, 730);
+        paint_7.position.set(61, 52, 730);
         paint_7.scale.set(30, 60, 30);
         
 	  model = gltf.scene;
@@ -221,7 +239,14 @@ window.onload = function init()
 		console.error(error);
 	});
 
-	
+	// 밀로의 비너스 스포트라이트
+	spotLight_01 = new THREE.SpotLight( 0xfcf7cf, 0.5); // 파라미터 : (조명 색, 조명 세기)
+	spotLight_01.position.set(1, 70, 170 ); // 광원의 위치
+	spotLight_01.angle = Math.PI/12; // 비추는 범위 크기(원형태)
+	spotLight_01.castShadow = true; // 그림자 생성
+	spotLight_01.target.position.set(-40, 0, 170); // 비출 대상의 위치 (= 빛의 방향)
+	spotLight_01.target.updateMatrixWorld(); // 정보 업데이트
+	scene.add( spotLight_01 ); // 빛 정보 추가
 	
 	// 동상 1 -밀로의 비너스 
 	   loader.load('./statue/venus_milo/scene.gltf', function(gltf){
@@ -239,6 +264,15 @@ window.onload = function init()
 		console.error(error);
 	});
 
+	// 원반 던지는 사람 스포트라이트
+	spotLight_02 = new THREE.SpotLight( 0xfcf7cf, 0.5); // 파라미터 : (조명 색, 조명 세기)
+	spotLight_02.position.set(1, 70, 260 ); // 광원의 위치
+	spotLight_02.angle = Math.PI/12; // 비추는 범위 크기(원형태)
+	spotLight_02.castShadow = true; // 그림자 생성
+	spotLight_02.target.position.set(-75, 0, 260); // 비출 대상의 위치 (= 빛의 방향)
+	spotLight_02.target.updateMatrixWorld(); // 정보 업데이트
+	scene.add( spotLight_02 ); // 빛 정보 추가
+
 	// 동상 2 - 미론 - 원반 던지는 사람
 	loader.load('./statue/discobolus/scene.gltf', function(gltf){
         statue_2 = gltf.scene.children[0];
@@ -254,6 +288,15 @@ window.onload = function init()
 	}, undefined, function (error) {
 		console.error(error);
 	});
+
+	// 다비드 스포트라이트
+	spotLight_03 = new THREE.SpotLight( 0xfcf7cf, 0.5); // 파라미터 : (조명 색, 조명 세기)
+	spotLight_03.position.set(1, 70, 410 ); // 광원의 위치
+	spotLight_03.angle = Math.PI/13; // 비추는 범위 크기(원형태)
+	spotLight_03.castShadow = true; // 그림자 생성
+	spotLight_03.target.position.set(-35, 10, 410); // 비출 대상의 위치 (= 빛의 방향)
+	spotLight_03.target.updateMatrixWorld(); // 정보 업데이트
+	scene.add( spotLight_03 ); // 빛 정보 추가
 
 	// 동상 3 - 미켈란젤로 - 다비드
 	loader.load('./statue/david/scene.gltf', function(gltf){
