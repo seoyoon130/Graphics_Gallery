@@ -77,6 +77,15 @@ window.onload = function init()
 		console.error(error);
 	});
 
+	// 올리브 트리 스포트라이트
+	spotLight_2 = new THREE.SpotLight( 0xfcf7cf, 0.5); // 파라미터 : (조명 색, 조명 세기)
+	spotLight_2.position.set(1, 70, 153 ); // 광원의 위치
+	spotLight_2.angle = Math.PI/11; // 비추는 범위 크기(원형태)
+	spotLight_2.castShadow = true; // 그림자 생성
+	spotLight_2.target.position.set(19, 65, 153); // 비출 대상의 위치 (= 빛의 방향)
+	spotLight_2.target.updateMatrixWorld(); // 정보 업데이트
+	scene.add( spotLight_2 ); // 빛 정보 추가
+
 	// 작품 2 - 올리브 트리
     loader.load('./painting/olivetree/scene.gltf', function(gltf){
         paint_2 = gltf.scene.children[0];
@@ -129,8 +138,8 @@ window.onload = function init()
 	});
 
 	// 게르니카 스포트라이트
-	spotLight = new THREE.SpotLight( 0xffffff, 0.8); // 파라미터 : (조명 색, 조명 세기)
-	spotLight.position.set( 50, 70, 433 ); // 광원의 위치
+	spotLight = new THREE.SpotLight( 0xfcf7cf, 1.5); // 파라미터 : (조명 색, 조명 세기)
+	spotLight.position.set( 50, 75, 433 ); // 광원의 위치
 	spotLight.angle = Math.PI/4; // 비추는 범위 크기(원형태)
 	spotLight.castShadow = true; // 그림자 생성
 	// spotLight.shadow.mapSize.width = 1;
