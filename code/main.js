@@ -28,11 +28,11 @@ window.onload = function init()
 	// hlight = new THREE.AmbientLight (0x404040,50);
 	// scene.add(hlight);
     // 광원 ( 네가지 방향에서 전시장을 비춤 )
-	light = new THREE.PointLight(0xc4c4c4,1);
+	light = new THREE.PointLight(0xc4c4c4,0.4);
 	light.position.set(-1000000,1000000,1000000);
 	scene.add(light);
 
-	light2 = new THREE.PointLight(0xc4c4c4,1);
+	light2 = new THREE.PointLight(0xc4c4c4,0.4);
 	light2.position.set(1000000,1000000,1000000);
 	scene.add(light2);
 
@@ -40,7 +40,7 @@ window.onload = function init()
 	light3.position.set(-1000000,-1000000,1000000);
 	scene.add(light3);
 
-	light4 = new THREE.PointLight(0xc4bdb1,0.8);
+	light4 = new THREE.PointLight(0xc4bdb1,0.4);
 	light4.position.set(1000000,-1000000,-1000000);
 	scene.add(light4);
 
@@ -62,6 +62,15 @@ window.onload = function init()
 	}, undefined, function (error) {
 		console.error(error);
 	});
+
+	// 별이 빛나는 밤 스포트라이트
+	spotLight_1 = new THREE.SpotLight( 0xfcf7cf, 0.3); // 파라미터 : (조명 색, 조명 세기)
+	spotLight_1.position.set(8, 65, 60 ); // 광원의 위치
+	spotLight_1.angle = Math.PI/4; // 비추는 범위 크기(원형태)
+	spotLight_1.castShadow = true; // 그림자 생성
+	spotLight_1.target.position.set(8, 53, 13); // 비출 대상의 위치 (= 빛의 방향)
+	spotLight_1.target.updateMatrixWorld(); // 정보 업데이트
+	scene.add( spotLight_1 ); // 빛 정보 추가
 
     // 작품 1 - 별이 빛나는 밤
     loader.load('./painting/starry_night/scene.gltf', function(gltf){
@@ -131,7 +140,7 @@ window.onload = function init()
 	});
 
 	// 라파이 스포트라이트
-	spotLight_4 = new THREE.SpotLight( 0xfcf7cf, 0.3); // 파라미터 : (조명 색, 조명 세기)
+	spotLight_4 = new THREE.SpotLight( 0xfcf7cf, 0.2); // 파라미터 : (조명 색, 조명 세기)
 	spotLight_4.position.set(1, 70, 320 ); // 광원의 위치
 	spotLight_4.angle = Math.PI/7; // 비추는 범위 크기(원형태)
 	spotLight_4.castShadow = true; // 그림자 생성
@@ -187,7 +196,7 @@ window.onload = function init()
 	}, undefined, function (error) {
 		console.error(error);
 	});
-
+	
 	// 작품 5 - 모네 (수련)
     loader.load('./painting/water_lilies/scene.gltf', function(gltf){
         paint_5 = gltf.scene.children[0];
@@ -227,7 +236,7 @@ window.onload = function init()
         paint_7 = gltf.scene.children[0];
 		paint_7.position.set(0, 0, 0);
         paint_7.rotation.z = getRadian(-90);
-        paint_7.position.set(61, 52, 730);
+        paint_7.position.set(60, 52, 730);
         paint_7.scale.set(30, 60, 30);
         
 	  model = gltf.scene;
@@ -240,11 +249,11 @@ window.onload = function init()
 	});
 
 	// 밀로의 비너스 스포트라이트
-	spotLight_01 = new THREE.SpotLight( 0xfcf7cf, 0.5); // 파라미터 : (조명 색, 조명 세기)
-	spotLight_01.position.set(1, 70, 170 ); // 광원의 위치
-	spotLight_01.angle = Math.PI/12; // 비추는 범위 크기(원형태)
+	spotLight_01 = new THREE.SpotLight( 0xfcf7cf, 0.4); // 파라미터 : (조명 색, 조명 세기)
+	spotLight_01.position.set(15, 90, 170); // 광원의 위치
+	spotLight_01.angle = Math.PI/10; // 비추는 범위 크기(원형태)
 	spotLight_01.castShadow = true; // 그림자 생성
-	spotLight_01.target.position.set(-40, 0, 170); // 비출 대상의 위치 (= 빛의 방향)
+	spotLight_01.target.position.set(-40, 50, 170); // 비출 대상의 위치 (= 빛의 방향)
 	spotLight_01.target.updateMatrixWorld(); // 정보 업데이트
 	scene.add( spotLight_01 ); // 빛 정보 추가
 	
@@ -265,11 +274,11 @@ window.onload = function init()
 	});
 
 	// 원반 던지는 사람 스포트라이트
-	spotLight_02 = new THREE.SpotLight( 0xfcf7cf, 0.5); // 파라미터 : (조명 색, 조명 세기)
-	spotLight_02.position.set(1, 70, 260 ); // 광원의 위치
+	spotLight_02 = new THREE.SpotLight( 0xfcf7cf, 0.4); // 파라미터 : (조명 색, 조명 세기)
+	spotLight_02.position.set(15, 85, 263 ); // 광원의 위치
 	spotLight_02.angle = Math.PI/12; // 비추는 범위 크기(원형태)
 	spotLight_02.castShadow = true; // 그림자 생성
-	spotLight_02.target.position.set(-75, 0, 260); // 비출 대상의 위치 (= 빛의 방향)
+	spotLight_02.target.position.set(-75, 10, 263); // 비출 대상의 위치 (= 빛의 방향)
 	spotLight_02.target.updateMatrixWorld(); // 정보 업데이트
 	scene.add( spotLight_02 ); // 빛 정보 추가
 
@@ -290,11 +299,11 @@ window.onload = function init()
 	});
 
 	// 다비드 스포트라이트
-	spotLight_03 = new THREE.SpotLight( 0xfcf7cf, 0.5); // 파라미터 : (조명 색, 조명 세기)
-	spotLight_03.position.set(1, 70, 410 ); // 광원의 위치
-	spotLight_03.angle = Math.PI/13; // 비추는 범위 크기(원형태)
+	spotLight_03 = new THREE.SpotLight( 0xfcf7cf, 0.2); // 파라미터 : (조명 색, 조명 세기)
+	spotLight_03.position.set(15, 95, 410 ); // 광원의 위치
+	spotLight_03.angle = Math.PI/10; // 비추는 범위 크기(원형태)
 	spotLight_03.castShadow = true; // 그림자 생성
-	spotLight_03.target.position.set(-35, 10, 410); // 비출 대상의 위치 (= 빛의 방향)
+	spotLight_03.target.position.set(-35, 50, 410); // 비출 대상의 위치 (= 빛의 방향)
 	spotLight_03.target.updateMatrixWorld(); // 정보 업데이트
 	scene.add( spotLight_03 ); // 빛 정보 추가
 
