@@ -197,7 +197,7 @@ window.onload = function init()
 		console.error(error);
 	});
 
-	수련 스포트라이트
+	//수련 스포트라이트
 	spotLight_5 = new THREE.SpotLight( 0xfcf7cf, 0.3); // 파라미터 : (조명 색, 조명 세기)
 	spotLight_5.position.set(20, 35, 550); // 광원의 위치
 	spotLight_5.angle = Math.PI/6; // 비추는 범위 크기(원형태)
@@ -205,7 +205,7 @@ window.onload = function init()
 	spotLight_5.target.position.set(59, 46, 550); // 비출 대상의 위치 (= 빛의 방향)
 	spotLight_5.target.updateMatrixWorld(); // 정보 업데이트
 	scene.add( spotLight_5 ); // 빛 정보 추가
-	작품 5 - 모네 (수련)
+	//작품 5 - 모네 (수련)
     loader.load('./painting/water_lilies/scene.gltf', function(gltf){
         paint_5 = gltf.scene.children[0];
 		paint_5.position.set(0, 0, 0);
@@ -222,7 +222,7 @@ window.onload = function init()
 		console.error(error);
 	});
 	
-	모네 스포트라이트
+	//모네 스포트라이트
 	spotLight_6 = new THREE.SpotLight( 0xfcf7cf, 0.3); // 파라미터 : (조명 색, 조명 세기)
 	spotLight_6.position.set(20, 50, 650); // 광원의 위치
 	spotLight_6.angle = Math.PI/6; // 비추는 범위 크기(원형태)
@@ -232,7 +232,7 @@ window.onload = function init()
 	spotLight_6.target.updateMatrixWorld(); // 정보 업데이트
 	scene.add( spotLight_6 ); // 빛 정보 추가
 
-	작품 6 - 모네 (양산을 든 여인)
+	//작품 6 - 모네 (양산을 든 여인)
     loader.load('./painting/woman/scene.gltf', function(gltf){
         paint_6 = gltf.scene.children[0];
 		paint_6.position.set(0, 0, 0);
@@ -249,7 +249,7 @@ window.onload = function init()
 		console.error(error);
 	});
 
-	드가 스포트라이트
+	//드가 스포트라이트
 	spotLight_7 = new THREE.SpotLight( 0xfcf7cf, 0.3); // 파라미터 : (조명 색, 조명 세기)
 	spotLight_7.position.set(20, 35, 720); // 광원의 위치
 	spotLight_7.angle = Math.PI/7; // 비추는 범위 크기(원형태)
@@ -258,7 +258,7 @@ window.onload = function init()
 	spotLight_7.target.updateMatrixWorld(); // 정보 업데이트
 	scene.add( spotLight_7 ); // 빛 정보 추가
 
-	작품 7 - 드가 (발레수업)
+	//작품 7 - 드가 (발레수업)
     loader.load('./painting/edgar_degas/scene.gltf', function(gltf){
         paint_7 = gltf.scene.children[0];
 		paint_7.position.set(0, 0, 0);
