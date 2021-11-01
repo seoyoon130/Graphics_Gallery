@@ -196,8 +196,16 @@ window.onload = function init()
 	}, undefined, function (error) {
 		console.error(error);
 	});
-	
-	// 작품 5 - 모네 (수련)
+
+	수련 스포트라이트
+	spotLight_5 = new THREE.SpotLight( 0xfcf7cf, 0.3); // 파라미터 : (조명 색, 조명 세기)
+	spotLight_5.position.set(20, 35, 550); // 광원의 위치
+	spotLight_5.angle = Math.PI/6; // 비추는 범위 크기(원형태)
+	spotLight_5.castShadow = true; // 그림자 생성
+	spotLight_5.target.position.set(59, 46, 550); // 비출 대상의 위치 (= 빛의 방향)
+	spotLight_5.target.updateMatrixWorld(); // 정보 업데이트
+	scene.add( spotLight_5 ); // 빛 정보 추가
+	작품 5 - 모네 (수련)
     loader.load('./painting/water_lilies/scene.gltf', function(gltf){
         paint_5 = gltf.scene.children[0];
 		paint_5.position.set(0, 0, 0);
@@ -214,7 +222,17 @@ window.onload = function init()
 		console.error(error);
 	});
 	
-	// 작품 6 - 모네 (양산을 든 여인)
+	모네 스포트라이트
+	spotLight_6 = new THREE.SpotLight( 0xfcf7cf, 0.3); // 파라미터 : (조명 색, 조명 세기)
+	spotLight_6.position.set(20, 50, 650); // 광원의 위치
+	spotLight_6.angle = Math.PI/6; // 비추는 범위 크기(원형태)
+	spotLight_6.castShadow = true; // 그림자 생성
+	spotLight_6.target.position.set(68, 55
+		, 650); // 비출 대상의 위치 (= 빛의 방향)
+	spotLight_6.target.updateMatrixWorld(); // 정보 업데이트
+	scene.add( spotLight_6 ); // 빛 정보 추가
+
+	작품 6 - 모네 (양산을 든 여인)
     loader.load('./painting/woman/scene.gltf', function(gltf){
         paint_6 = gltf.scene.children[0];
 		paint_6.position.set(0, 0, 0);
@@ -231,12 +249,21 @@ window.onload = function init()
 		console.error(error);
 	});
 
-	// 작품 7 - 드가 (발레수업)
+	드가 스포트라이트
+	spotLight_7 = new THREE.SpotLight( 0xfcf7cf, 0.3); // 파라미터 : (조명 색, 조명 세기)
+	spotLight_7.position.set(20, 35, 720); // 광원의 위치
+	spotLight_7.angle = Math.PI/7; // 비추는 범위 크기(원형태)
+	spotLight_7.castShadow = true; // 그림자 생성
+	spotLight_7.target.position.set(60, 50, 720); // 비출 대상의 위치 (= 빛의 방향)
+	spotLight_7.target.updateMatrixWorld(); // 정보 업데이트
+	scene.add( spotLight_7 ); // 빛 정보 추가
+
+	작품 7 - 드가 (발레수업)
     loader.load('./painting/edgar_degas/scene.gltf', function(gltf){
         paint_7 = gltf.scene.children[0];
 		paint_7.position.set(0, 0, 0);
         paint_7.rotation.z = getRadian(-90);
-        paint_7.position.set(60, 52, 730);
+        paint_7.position.set(60, 52, 720);
         paint_7.scale.set(30, 60, 30);
         
 	  model = gltf.scene;
@@ -323,11 +350,19 @@ window.onload = function init()
 		console.error(error);
 	});
 
+	//로댕 스포트라이트
+	spotLight_04 = new THREE.SpotLight( 0xfcf7cf, 0.2); // 파라미터 : (조명 색, 조명 세기)
+	spotLight_04.position.set(15, 95, 500 ); // 광원의 위치
+	spotLight_04.angle = Math.PI/10; // 비추는 범위 크기(원형태)
+	spotLight_04.castShadow = true; // 그림자 생성
+	spotLight_04.target.position.set(-35, 50, 500); // 비출 대상의 위치 (= 빛의 방향)
+	spotLight_04.target.updateMatrixWorld(); // 정보 업데이트
+	scene.add( spotLight_04 ); // 빛 정보 추가
 	// 동상 4 - 로댕(생각하는 사람)
 	loader.load('./statue/the_thinker/scene.gltf', function(gltf){
         statue_4 = gltf.scene.children[0];
 		statue_4.rotation.z = getRadian(80);
-        statue_4.position.set(-35,0,500);
+        statue_4.position.set(-35,-5,500);
         statue_4.scale.set(25, 30, 30);
         
 	  model = gltf.scene;
@@ -339,38 +374,53 @@ window.onload = function init()
 		console.error(error);
 	}); 
 
+	//피에타 스포트라이트
+	spotLight_05 = new THREE.SpotLight( 0xfcf7cf, 0.2); // 파라미터 : (조명 색, 조명 세기)
+	spotLight_05.position.set(15, 95, 650 ); // 광원의 위치
+	spotLight_05.angle = Math.PI/10; // 비추는 범위 크기(원형태)
+	spotLight_05.castShadow = true; // 그림자 생성
+	spotLight_05.target.position.set(-35, 50, 650); // 비출 대상의 위치 (= 빛의 방향)
+	spotLight_05.target.updateMatrixWorld(); // 정보 업데이트
+	scene.add( spotLight_05 ); // 빛 정보 추가
 
-	// // 동상 5 - 피에타
-	// loader.load('./statue/pieta/scene.gltf', function(gltf){
-    //     statue_5 = gltf.scene.children[0];
-	// 	statue_5.rotation.z = getRadian(80);
-    //     statue_5.position.set(-35,-15,650);
-    //     statue_5.scale.set(20, 25, 20);
-        
-	//   model = gltf.scene;
+	 // 동상 5 - 피에타
+	loader.load('./statue/pieta/scene.gltf', function(gltf){
+     	statue_5 = gltf.scene.children[0];
+		statue_5.rotation.z = getRadian(80);
+
+    	statue_5.position.set(-30, -20, 650);
+    	statue_5.scale.set(20, 25, 20);
+		model = gltf.scene;
+		scene.add(model);
+
+		animate();
+	}, undefined, function (error) {
+		console.error(error);
+	}); 
+
+	//Grabfigur 스포트라이트
+	spotLight_06 = new THREE.SpotLight( 0xfcf7cf, 0.2); // 파라미터 : (조명 색, 조명 세기)
+	spotLight_06.position.set(15, 95, 740 ); // 광원의 위치
+	spotLight_06.angle = Math.PI/10; // 비추는 범위 크기(원형태)
+	spotLight_06.castShadow = true; // 그림자 생성
+	spotLight_06.target.position.set(-35, 50, 740); // 비출 대상의 위치 (= 빛의 방향)
+	spotLight_06.target.updateMatrixWorld(); // 정보 업데이트
+	scene.add( spotLight_06 ); // 빛 정보 추가
+	// 동상 6 - Grabfigur
+	loader.load('./statue/Grabfigur/scene.gltf', function(gltf){
+    	statue_6 = gltf.scene.children[0];
+		statue_6.rotation.z = getRadian(270);
+    	statue_6.position.set(-30,-10,740);
+    	statue_6.scale.set(2, 4, 4);
+		
+		model = gltf.scene;
 	  
-	//   scene.add(model);
+		scene.add(model);
 
-	//   animate();
-	// }, undefined, function (error) {
-	// 	console.error(error);
-	// }); 
-
-	// // 동상 6 - Grabfigur
-	// loader.load('./statue/Grabfigur/scene.gltf', function(gltf){
-    //     statue_6 = gltf.scene.children[0];
-	// 	statue_6.rotation.z = getRadian(80);
-    //     statue_6.position.set(-30,0,740);
-    //     statue_6.scale.set(2, 4, 4);
-        
-	//   model = gltf.scene;
-	  
-	//   scene.add(model);
-
-	//   animate();
-	// }, undefined, function (error) {
-	// 	console.error(error);
-	// }); 
+		animate();
+	}, undefined, function (error) {
+		console.error(error);
+	}); 
 
 	function animate() {
 
