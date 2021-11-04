@@ -422,7 +422,7 @@ window.onload = function init()
 		console.error(error);
 	}); 
 
-	document.getElementById("TheStarryNight").onclick = function (event) {
+   document.getElementById("TheStarryNight").onclick = function (event) {
 		
 		camera.position.z = -180;
 		camera.position.set(5,40,125);
@@ -480,7 +480,7 @@ window.onload = function init()
    document.getElementById("WomanWithAParasol").onclick = function (event) {
    
 		camera.rotation.z = 90;
-		camera.position.set(22,45,650);
+		camera.position.set(20,45,650);
 		controls.target.set(80,45,650);
 		controls.update();
 
