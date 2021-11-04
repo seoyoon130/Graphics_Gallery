@@ -462,7 +462,7 @@ window.onload = function init()
    document.getElementById("Guernica").onclick = function (event) {
 	   
 	    camera.rotation.z = 90;
-		camera.position.set(-17,65,433);
+		camera.position.set(-25,55,433);
 		controls.target.set(80,45,433);
 		controls.update();
    
