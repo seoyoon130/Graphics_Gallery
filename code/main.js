@@ -326,7 +326,7 @@ window.onload = function init()
 	});
 
 	// 다비드 스포트라이트
-	spotLight_03 = new THREE.SpotLight( 0xfcf7cf, 0.2); // 파라미터 : (조명 색, 조명 세기)
+	spotLight_03 = new THREE.SpotLight( 0xfcf7cf, 0.4); // 파라미터 : (조명 색, 조명 세기)
 	spotLight_03.position.set(15, 95, 410 ); // 광원의 위치
 	spotLight_03.angle = Math.PI/10; // 비추는 범위 크기(원형태)
 	spotLight_03.castShadow = true; // 그림자 생성
@@ -351,7 +351,7 @@ window.onload = function init()
 	});
 
 	//로댕 스포트라이트
-	spotLight_04 = new THREE.SpotLight( 0xfcf7cf, 0.2); // 파라미터 : (조명 색, 조명 세기)
+	spotLight_04 = new THREE.SpotLight( 0xfcf7cf, 0.5); // 파라미터 : (조명 색, 조명 세기)
 	spotLight_04.position.set(15, 95, 500 ); // 광원의 위치
 	spotLight_04.angle = Math.PI/10; // 비추는 범위 크기(원형태)
 	spotLight_04.castShadow = true; // 그림자 생성
@@ -375,7 +375,7 @@ window.onload = function init()
 	}); 
 
 	//피에타 스포트라이트
-	spotLight_05 = new THREE.SpotLight( 0xfcf7cf, 0.2); // 파라미터 : (조명 색, 조명 세기)
+	spotLight_05 = new THREE.SpotLight( 0xfcf7cf, 0.5); // 파라미터 : (조명 색, 조명 세기)
 	spotLight_05.position.set(15, 95, 650 ); // 광원의 위치
 	spotLight_05.angle = Math.PI/10; // 비추는 범위 크기(원형태)
 	spotLight_05.castShadow = true; // 그림자 생성
@@ -399,7 +399,7 @@ window.onload = function init()
 	}); 
 
 	//Grabfigur 스포트라이트
-	spotLight_06 = new THREE.SpotLight( 0xfcf7cf, 0.2); // 파라미터 : (조명 색, 조명 세기)
+	spotLight_06 = new THREE.SpotLight( 0xfcf7cf, 0.5); // 파라미터 : (조명 색, 조명 세기)
 	spotLight_06.position.set(15, 95, 740 ); // 광원의 위치
 	spotLight_06.angle = Math.PI/10; // 비추는 범위 크기(원형태)
 	spotLight_06.castShadow = true; // 그림자 생성
