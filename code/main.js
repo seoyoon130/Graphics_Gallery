@@ -428,32 +428,25 @@ window.onload = function init()
 		camera.position.set(5,40,125);
 		controls.target.set(8,19,45);
 		controls.update();
-
 	   
 	   };
 	   
-
-	   
    document.getElementById("OliveTree").onclick = function (event) {
-   
-		 
-		  camera.position.set(20, 45, 160);
-		  controls.target.set(80,45,160);
-		  controls.update();
+   	 
+	    camera.rotation.z = 90;
+		camera.position.set(20, 45, 160);
+		controls.target.set(80,45,160);
+		controls.update();
 
-
-		
 	   };
 	   
 	   
    document.getElementById("MonaLisa").onclick = function (event) {
    
+	    camera.rotation.z = 90;
 		camera.position.set(23,45,230);
 		controls.target.set(80,45,230);
 		controls.update();
-
-		
-   
 
 	   };
 	   
@@ -466,16 +459,13 @@ window.onload = function init()
 
 	   };
 	   
-	   
-	   
    document.getElementById("Guernica").onclick = function (event) {
 	   
-	   camera.rotation.z = 90;
+	    camera.rotation.z = 90;
 		camera.position.set(-48,38,433);
 		controls.target.set(80,45,433);
 		controls.update();
    
-
 	   };
 	   
    document.getElementById("WaterLilies").onclick = function (event) {
@@ -484,7 +474,6 @@ window.onload = function init()
 		camera.position.set(13,45,550);
 		controls.target.set(80,45,550);
 		controls.update();
-   
 
 	   };
 	   
@@ -497,90 +486,69 @@ window.onload = function init()
 
 	   };
 	   
-   document.getElementById("TheDanceClass").onclick = function (event) {
-	   
-	   
+   document.getElementById("TheDanceClass").onclick = function (event) {   
 
 		camera.rotation.z = 90;
 		camera.position.set(20,45,720);
 		controls.target.set(80,45,720);
 		controls.update();
    
-
 	   };
    
    document.getElementById("VenusDeMilo").onclick = function (event) {
 	   
-	   
-
 		camera.rotation.z = -90;
 		camera.position.set(55,50,170);
 		controls.target.set(-80,0,170);
 		controls.update();
    
-
 	   };
 	   
    document.getElementById("Discobolus").onclick = function (event) {
-	   
-	   
-
+	      
 		camera.rotation.z = -90;
 		camera.position.set(42,10,263);
 		controls.target.set(-75,37,263);
 		controls.update();
    
-
 	   };
 	   
    document.getElementById("David").onclick = function (event) {
 	   
-	   
-
 		camera.rotation.z = -90;
 		camera.position.set(58,41,410);
 		controls.target.set(-80,0,410);
 		controls.update();
    
-
 	   };
+
    document.getElementById("TheThinker").onclick = function (event) {
 	   
-	   
-
 		camera.rotation.z = -90;
 		camera.position.set(40,25,500);
 		controls.target.set(-80,-5,500);
 		controls.update();
    
-
 	   };
 	   
    document.getElementById("Pieta").onclick = function (event) {
 	   
-	   
-		
 		camera.rotation.z = -90;
 		camera.position.set(58,55,650);
 		controls.target.set(-80,-20,650);
 		controls.update();
    
-
 	   };
 	   
    document.getElementById("Grabfigur").onclick = function (event) {
-	   
-	   
 
 		camera.rotation.z = -90;
 		camera.position.set(50,25,740);
 		controls.target.set(-80,25,740);
 		controls.update();
-   
 
 	   };
 	   
-
 	function animate() {
 
 	   renderer.render(scene,camera);
