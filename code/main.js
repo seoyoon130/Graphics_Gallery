@@ -541,8 +541,15 @@ window.onload = function init()
 		camera.position.set(5,40,125);
 		controls.target.set(8,19,45);
 		controls.update();
+
+		document.getElementById("modal1").style.display="block";
 	   
 	   };
+
+	   document.getElementById("modal_close_btn1").onclick = function() {
+		        document.getElementById("modal1").style.display="none";
+		    }
+
 	   
    document.getElementById("OliveTree").onclick = function (event) {
    	 
@@ -552,7 +559,13 @@ window.onload = function init()
 		a=50,b=45,c=160;
 		controls.update();
 
+		document.getElementById("modal2").style.display="block";
+
 	   };
+
+	   document.getElementById("modal_close_btn2").onclick = function() {
+		        document.getElementById("modal2").style.display="none";
+		    }   
 	   
 	   
    document.getElementById("MonaLisa").onclick = function (event) {
@@ -563,7 +576,13 @@ window.onload = function init()
 		a=53,b=45,c=230;
 		controls.update();
 
+		document.getElementById("modal3").style.display="block";
+
 	   };
+
+	   document.getElementById("modal_close_btn3").onclick = function() {
+		        document.getElementById("modal3").style.display="none";
+		    }  
 	   
    document.getElementById("Lapie").onclick = function (event) {
 	  
@@ -573,7 +592,13 @@ window.onload = function init()
 		a=43,b=45,c=320;
 		controls.update();
 
+		document.getElementById("modal4").style.display="block";
+
 	   };
+
+	   document.getElementById("modal_close_btn4").onclick = function() {
+		        document.getElementById("modal4").style.display="none";
+		    }  
 	   
    document.getElementById("Guernica").onclick = function (event) {
 	   
@@ -582,8 +607,14 @@ window.onload = function init()
 		controls.target.set(80,45,433);
 		a=15,b=55,c=433;
 		controls.update();
+
+		document.getElementById("modal5").style.display="block";
    
 	   };
+
+	   document.getElementById("modal_close_btn5").onclick = function() {
+		        document.getElementById("modal5").style.display="none";
+		    }  
 	   
    document.getElementById("WaterLilies").onclick = function (event) {
 	   
@@ -593,7 +624,13 @@ window.onload = function init()
 		a=43,b=45,c=550;
 		controls.update();
 
+		document.getElementById("modal6").style.display="block";
+
 	   };
+
+	   document.getElementById("modal_close_btn6").onclick = function() {
+		        document.getElementById("modal6").style.display="none";
+		    }  
 	   
    document.getElementById("WomanWithAParasol").onclick = function (event) {
    
@@ -603,7 +640,13 @@ window.onload = function init()
 		a=50,b=45,c=650;
 		controls.update();
 
+		document.getElementById("modal7").style.display="block";
+
 	   };
+
+	   document.getElementById("modal_close_btn7").onclick = function() {
+		        document.getElementById("modal7").style.display="none";
+		    }  
 	   
    document.getElementById("TheDanceClass").onclick = function (event) {   
 
@@ -612,8 +655,14 @@ window.onload = function init()
 		controls.target.set(80,45,720);
 		a=50,b=45,c=720;
 		controls.update();
+
+		document.getElementById("modal8").style.display="block";
    
 	   };
+
+	   document.getElementById("modal_close_btn8").onclick = function() {
+		        document.getElementById("modal8").style.display="none";
+		    }  
    
    document.getElementById("VenusDeMilo").onclick = function (event) {
 	   
@@ -622,8 +671,14 @@ window.onload = function init()
 		controls.target.set(-80,0,170);
 		a=25,b=50,c=170;
 		controls.update();
+
+		document.getElementById("modal9").style.display="block";
    
 	   };
+
+	   document.getElementById("modal_close_btn9").onclick = function() {
+		        document.getElementById("modal9").style.display="none";
+		    }  
 	   
    document.getElementById("Discobolus").onclick = function (event) {
 	      
@@ -632,8 +687,14 @@ window.onload = function init()
 		controls.target.set(-75,37,263);
 		a=12,b=10,c=263;
 		controls.update();
+
+		document.getElementById("modal10").style.display="block";
    
 	   };
+
+	   document.getElementById("modal_close_btn10").onclick = function() {
+		        document.getElementById("modal10").style.display="none";
+		    }  
 	   
    document.getElementById("David").onclick = function (event) {
 	   
@@ -642,8 +703,14 @@ window.onload = function init()
 		controls.target.set(-80,0,410);
 		a=28,b=41,c=410;
 		controls.update();
+
+		document.getElementById("modal11").style.display="block";
    
 	   };
+
+	   document.getElementById("modal_close_btn11").onclick = function() {
+		        document.getElementById("modal11").style.display="none";
+		    }  
 
    document.getElementById("TheThinker").onclick = function (event) {
 	   
@@ -652,8 +719,14 @@ window.onload = function init()
 		controls.target.set(-80,-5,500);
 		a=10,b=25,c=500;
 		controls.update();
+
+		document.getElementById("modal12").style.display="block";
    
 	   };
+
+	   document.getElementById("modal_close_btn12").onclick = function() {
+		        document.getElementById("modal12").style.display="none";
+		    }  
 	   
    document.getElementById("Pieta").onclick = function (event) {
 	   
@@ -662,8 +735,14 @@ window.onload = function init()
 		controls.target.set(-80,-20,650);
 		a=28,b=55,c=650;
 		controls.update();
+
+		document.getElementById("modal13").style.display="block";
    
 	   };
+
+	   document.getElementById("modal_close_btn13").onclick = function() {
+		        document.getElementById("modal13").style.display="none";
+		    }  
 	   
    document.getElementById("Grabfigur").onclick = function (event) {
 
@@ -673,9 +752,14 @@ window.onload = function init()
 		a=20,b=25,c=740;
 		controls.update();
 
+		document.getElementById("modal14").style.display="block";
+
 	   };
 
-	     
+	   document.getElementById("modal_close_btn14").onclick = function() {
+		        document.getElementById("modal14").style.display="none";
+		    }  
+	   
 	function animate() {
 
 	   renderer.render(scene,camera);
