@@ -17,11 +17,124 @@ window.onload = function init()
 	scene.background = new THREE.Color("rgb(186, 182, 182)");
 
     // 카메라 위치 
+
 	camera = new THREE.PerspectiveCamera(75,canvas.width / canvas.height,0.1, 1000);
+	
 	camera.rotation.z = 180/180*Math.PI;
-	camera.position.x = 0;
-	camera.position.y = 8;
-	camera.position.z = -50;
+	//camera.position.x = 0;
+	//camera.position.y = 8;
+	//camera.position.z = -50;
+
+	var a=30,b=40,c=850;
+	//var at = [50,60,100];
+
+	camera.position.set(a,b,c);
+	camera.lookAt(new THREE.Vector3(50,60,100));
+	
+	scene.add(camera);
+
+	//키보드
+
+		document.addEventListener('keydown', e =>{
+			const keyCode = e.keyCode;
+			console.log('pushed key'+e.key);
+
+			if(keyCode==65){
+
+				if(camera.rotation.z == 90 || camera.rotation.z ==-90)
+				{
+					camera.position.set(a,b,c);
+					camera.lookAt(new THREE.Vector3(50,60,100));
+
+					a-=10;
+
+				}
+				else{
+					a-=10;
+				camera.position.set(a,b,c);
+				camera.lookAt(new THREE.Vector3(50,60,100));
+				
+				}
+				
+
+				
+			}//왼쪽(a)
+
+			if(keyCode==83){
+				if(camera.rotation.z == 90 || camera.rotation.z ==-90)
+				{
+					camera.position.set(a,b,c);
+					camera.lookAt(new THREE.Vector3(50,60,100));
+
+					c+=10;
+
+					
+
+				}
+				else{
+					c+=10;
+					camera.position.set(a,b,c);
+					camera.lookAt(new THREE.Vector3(50,60,100));
+					
+				}
+				
+					
+				
+			}//뒤로(s)
+
+			if(keyCode==68){
+				if(camera.rotation.z == 90 || camera.rotation.z ==-90)
+				{
+					camera.position.set(a,b,c);
+					camera.lookAt(new THREE.Vector3(50,60,100));
+
+					a+=10;
+
+					
+
+				}
+				else{
+					a+=10;
+				camera.position.set(a,b,c);
+				camera.lookAt(new THREE.Vector3(50,60,100));
+				
+				}
+
+				
+				
+			}//오른쪽(d)
+
+			if(keyCode==87){
+				if(camera.rotation.z == 90 || camera.rotation.z ==-90)
+				{
+					camera.position.set(a,b,c);
+					camera.lookAt(new THREE.Vector3(50,60,100));
+
+					c-=10;
+
+					
+
+				}
+				else{
+					c-=10;
+					camera.position.set(a,b,c);
+					camera.lookAt(new THREE.Vector3(50,60,100));
+					
+				}
+					
+				
+			}//앞으로(w)
+
+			if(keyCode==32){
+				a=30,b=40,c=850;
+				camera.position.set(a,b,c);
+				camera.lookAt(new THREE.Vector3(50,60,100));
+				controls.update();
+			}
+		})
+
+	
+	
 
 	const controls = new THREE.OrbitControls(camera, renderer.domElement);
 
@@ -436,6 +549,7 @@ window.onload = function init()
 	    camera.rotation.z = 90;
 		camera.position.set(20, 45, 160);
 		controls.target.set(80,45,160);
+		a=50,b=45,c=160;
 		controls.update();
 
 	   };
@@ -446,6 +560,7 @@ window.onload = function init()
 	    camera.rotation.z = 90;
 		camera.position.set(23,45,230);
 		controls.target.set(80,45,230);
+		a=53,b=45,c=230;
 		controls.update();
 
 	   };
@@ -455,6 +570,7 @@ window.onload = function init()
 		camera.rotation.z = 90;
 		camera.position.set(13,45,320);
 		controls.target.set(80,45,320);
+		a=43,b=45,c=320;
 		controls.update();
 
 	   };
@@ -464,6 +580,7 @@ window.onload = function init()
 	    camera.rotation.z = 90;
 		camera.position.set(-25,55,433);
 		controls.target.set(80,45,433);
+		a=15,b=55,c=433;
 		controls.update();
    
 	   };
@@ -473,6 +590,7 @@ window.onload = function init()
 		camera.rotation.z = 90;
 		camera.position.set(13,45,550);
 		controls.target.set(80,45,550);
+		a=43,b=45,c=550;
 		controls.update();
 
 	   };
@@ -482,6 +600,7 @@ window.onload = function init()
 		camera.rotation.z = 90;
 		camera.position.set(20,45,650);
 		controls.target.set(80,45,650);
+		a=50,b=45,c=650;
 		controls.update();
 
 	   };
@@ -491,6 +610,7 @@ window.onload = function init()
 		camera.rotation.z = 90;
 		camera.position.set(20,45,720);
 		controls.target.set(80,45,720);
+		a=50,b=45,c=720;
 		controls.update();
    
 	   };
@@ -500,6 +620,7 @@ window.onload = function init()
 		camera.rotation.z = -90;
 		camera.position.set(55,50,170);
 		controls.target.set(-80,0,170);
+		a=25,b=50,c=170;
 		controls.update();
    
 	   };
@@ -509,6 +630,7 @@ window.onload = function init()
 		camera.rotation.z = -90;
 		camera.position.set(42,10,263);
 		controls.target.set(-75,37,263);
+		a=12,b=10,c=263;
 		controls.update();
    
 	   };
@@ -518,6 +640,7 @@ window.onload = function init()
 		camera.rotation.z = -90;
 		camera.position.set(58,41,410);
 		controls.target.set(-80,0,410);
+		a=28,b=41,c=410;
 		controls.update();
    
 	   };
@@ -527,6 +650,7 @@ window.onload = function init()
 		camera.rotation.z = -90;
 		camera.position.set(40,25,500);
 		controls.target.set(-80,-5,500);
+		a=10,b=25,c=500;
 		controls.update();
    
 	   };
@@ -536,6 +660,7 @@ window.onload = function init()
 		camera.rotation.z = -90;
 		camera.position.set(58,55,650);
 		controls.target.set(-80,-20,650);
+		a=28,b=55,c=650;
 		controls.update();
    
 	   };
@@ -545,10 +670,12 @@ window.onload = function init()
 		camera.rotation.z = -90;
 		camera.position.set(50,25,740);
 		controls.target.set(-80,25,740);
+		a=20,b=25,c=740;
 		controls.update();
 
 	   };
-	   
+
+	     
 	function animate() {
 
 	   renderer.render(scene,camera);
