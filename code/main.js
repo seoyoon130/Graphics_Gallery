@@ -130,7 +130,7 @@ window.onload = function init()
 				camera.position.set(a,b,c);
 				camera.lookAt(new THREE.Vector3(50,60,100));
 				controls.update();
-			}
+			}//처음위치로 리셋
 		})
 
 	
