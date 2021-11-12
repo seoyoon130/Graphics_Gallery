@@ -19,17 +19,21 @@ window.onload = function init()
     // 카메라 위치 
 
 	camera = new THREE.PerspectiveCamera(75,canvas.width / canvas.height,0.1, 1000);
-	
+	var r = 180/180*Math.PI;
 	camera.rotation.z = 180/180*Math.PI;
 	//camera.position.x = 0;
 	//camera.position.y = 8;
 	//camera.position.z = -50;
 
+	
+
 	var a=30,b=40,c=850;
-	//var at = [50,60,100];
+	var at=50;
+
+
 
 	camera.position.set(a,b,c);
-	camera.lookAt(new THREE.Vector3(50,60,100));
+	camera.lookAt(new THREE.Vector3(at,60,100));
 	
 	scene.add(camera);
 
@@ -41,86 +45,40 @@ window.onload = function init()
 
 			if(keyCode==65){
 
-				if(camera.rotation.z == 90 || camera.rotation.z ==-90)
-				{
-					camera.position.set(a,b,c);
-					camera.lookAt(new THREE.Vector3(50,60,100));
-
-					a-=10;
-
-				}
-				else{
-					a-=10;
+		
 				camera.position.set(a,b,c);
-				camera.lookAt(new THREE.Vector3(50,60,100));
-				
-				}
-				
 
+				at-=100;
+				camera.lookAt(new THREE.Vector3(at,60,100));
+
+				controls.update;
 				
+					
 			}//왼쪽(a)
 
 			if(keyCode==83){
-				if(camera.rotation.z == 90 || camera.rotation.z ==-90)
-				{
-					camera.position.set(a,b,c);
-					camera.lookAt(new THREE.Vector3(50,60,100));
-
-					c+=10;
-
-					
-
-				}
-				else{
+				
 					c+=10;
 					camera.position.set(a,b,c);
-					camera.lookAt(new THREE.Vector3(50,60,100));
-					
-				}
+					camera.lookAt(new THREE.Vector3(at,60,100));
 				
-					
-				
+
 			}//뒤로(s)
 
 			if(keyCode==68){
-				if(camera.rotation.z == 90 || camera.rotation.z ==-90)
-				{
-					camera.position.set(a,b,c);
-					camera.lookAt(new THREE.Vector3(50,60,100));
-
-					a+=10;
-
-					
-
-				}
-				else{
-					a+=10;
+				
+					at+=100;
 				camera.position.set(a,b,c);
-				camera.lookAt(new THREE.Vector3(50,60,100));
-				
-				}
-
-				
+				camera.lookAt(new THREE.Vector3(at,60,100));
+			
 				
 			}//오른쪽(d)
 
 			if(keyCode==87){
-				if(camera.rotation.z == 90 || camera.rotation.z ==-90)
-				{
-					camera.position.set(a,b,c);
-					camera.lookAt(new THREE.Vector3(50,60,100));
-
-					c-=10;
-
-					
-
-				}
-				else{
+				
 					c-=10;
 					camera.position.set(a,b,c);
-					camera.lookAt(new THREE.Vector3(50,60,100));
-					
-				}
+					camera.lookAt(new THREE.Vector3(at,60,100));
 					
 				
 			}//앞으로(w)
